@@ -11,11 +11,6 @@ const int MAX = 5;
 QueueHandle_t cua;
 lv_disp_t * disp;
 
-struct item {
-    int id;
-    char* nom;
-};
-
 static void lv_ticks_timer(void *arg) {
     (void) arg;
 
@@ -63,26 +58,6 @@ void lvgl_setup(){
     //lv_timer_create(lvgl_task,-1,)
 }
 
-void thread_0() {
-
-    
-    while(1) {
-        vTaskDelay(pdMS_TO_TICKS(500));
-        struct item bf;
-        xQueueReceive(cua, &bf, pdMS_TO_TICKS(100));
-        printf(bf.nom);
-    }
-}
-
-void thread_1() {
-    while(1) {
-        vTaskDelay(pdMS_TO_TICKS(500));
-        struct item bf;
-        xQueueReceive(cua, &bf, pdMS_TO_TICKS(100));
-        printf(bf.nom);
-    }
-}
-
 void lv_example_spinner_1(void)
 {
     lvgl_setup();
@@ -96,17 +71,35 @@ void lv_example_spinner_1(void)
     }
 }
 
-void app_main() {
-    cua = xQueueCreate(MAX, 4);
-    for(int i = 0; i<MAX; i++) {
-        struct item x;
-        x.id = i;
-        x.nom = "exa" + i;
-
-        xQueueSendToBack(cua, &x, pdMS_TO_TICKS(100));
+void lv_example_image(int xavi)
+{
+    lvgl_setup();
+    
+    if (xavi == 1)
+    {
+        LV_IMG_DECLARE(img_xavi);
+        lv_obj_t * img1 = lv_img_create(lv_scr_act());
+        lv_img_set_src(img1, &img_xavi);
+        lv_obj_align(img1, LV_ALIGN_CENTER, 0, 0);
     }
- 
+    else
+    {
+        LV_IMG_DECLARE(img_penguin);
+        lv_obj_t * img1 = lv_img_create(lv_scr_act());
+        lv_img_set_src(img1, &img_penguin);
+        lv_obj_align(img1, LV_ALIGN_CENTER, 0, -10);
+    }
+    
+    while (1) {
+        vTaskDelay(pdMS_TO_TICKS(10));
+        lv_timer_handler();
+    }
+}
+
+void app_main() {
     //xTaskCreate(thread_0, "test0", 2048, NULL, 1, NULL);
-    xTaskCreate(lv_example_spinner_1, "spinner", 4096, NULL, 1, NULL);
+    //xTaskCreate(lv_example_spinner_1, "spinner", 4096, NULL, 1, NULL);
     //xTaskCreate(thread_1, "test1", 2048, NULL, 0, NULL);
+
+    xTaskCreate(lv_example_image, "image", 8024, 0, 1, NULL);
 }

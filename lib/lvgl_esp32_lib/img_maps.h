@@ -1,0 +1,98 @@
+#ifndef IMG_MAPS_H
+#define IMG_MAPS_H
+
+#include "lvgl.h"
+#include "lvgl_helpers.h"
+#include "sdkconfig.h"
+
+#ifndef LV_ATTRIBUTE_MEM_ALIGN
+#define LV_ATTRIBUTE_MEM_ALIGN
+#endif
+
+#ifndef LV_ATTRIBUTE_IMG_TEST1243
+#define LV_ATTRIBUTE_IMG_TEST1243
+#endif
+
+
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_TEST1243 uint8_t test1243_map[16800];
+const lv_img_dsc_t test1243;
+
+#ifndef LV_ATTRIBUTE_IMG_ARROW_GREEN
+#define LV_ATTRIBUTE_IMG_ARROW_GREEN
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_ARROW_GREEN uint8_t arrow_green_map[2400];
+const lv_img_dsc_t arrow_green;
+
+#ifndef LV_ATTRIBUTE_IMG_LOGOUT_BUTTON
+#define LV_ATTRIBUTE_IMG_LOGOUT_BUTTON
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_LOGOUT_BUTTON uint8_t logout_button_map[9075];
+const lv_img_dsc_t logout_button;
+
+#ifndef LV_ATTRIBUTE_IMG_SETTINGS_BUTTON
+#define LV_ATTRIBUTE_IMG_SETTINGS_BUTTON
+#endif
+
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SETTINGS_BUTTON uint8_t settings_button_map[9075];
+const lv_img_dsc_t settings_button;
+
+#ifndef LV_ATTRIBUTE_IMG_MUTE_BUTTON
+#define LV_ATTRIBUTE_IMG_MUTE_BUTTON
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SETTINGS_BUTTON uint8_t mute_button_map[9075];
+const lv_img_dsc_t mute_button;
+
+#ifndef LV_ATTRIBUTE_IMG_MUTE_RED_BUTTON
+#define LV_ATTRIBUTE_IMG_MUTE_RED_BUTTON
+#endif
+
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SETTINGS_BUTTON uint8_t mute_red_button_map[9075];
+const lv_img_dsc_t mute_red_button;
+
+#ifndef LV_ATTRIBUTE_IMG_CLAITEC_LOGO
+#define LV_ATTRIBUTE_IMG_CLAITEC_LOGO
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_CLAITEC_LOGO uint8_t claitec_logo_map[6603];
+const lv_img_dsc_t claitec_logo;
+
+
+#ifndef LV_ATTRIBUTE_IMG_GRAY_CIRCLE
+#define LV_ATTRIBUTE_IMG_GRAY_CIRCLE
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_GRAY_CIRCLE uint8_t gray_circle_map[108300];
+const lv_img_dsc_t gray_circle;
+
+
+#ifndef LV_ATTRIBUTE_IMG_FORKLIFT_ICON
+#define LV_ATTRIBUTE_IMG_FORKLIFT_ICON
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_GRAY_CIRCLE uint8_t forklift_map[13920];
+const lv_img_dsc_t forklift;
+
+#ifndef LV_ATTRIBUTE_IMG_USER_LOGO
+#define LV_ATTRIBUTE_IMG_USER_LOGO
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_GRAY_CIRCLE uint8_t user_logo_map[2610];
+const lv_img_dsc_t user_logo;
+
+#ifndef LV_ATTRIBUTE_IMG_BACK_BUTTON
+#define LV_ATTRIBUTE_IMG_BACK_BUTTON
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_BACK_BUTTON uint8_t back_button_map[1650];
+const lv_img_dsc_t back_button;
+
+
+#ifndef LV_ATTRIBUTE_IMG_LOGIN_BUTTON_EMPTY
+#define LV_ATTRIBUTE_IMG_LOGIN_BUTTON_EMPTY
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_LOGIN_BUTTON_EMPTY uint8_t login_button_empty_map[];
+const lv_img_dsc_t login_numpad_button;
+
+
+#ifndef LV_ATTRIBUTE_IMG_LOGIN_NUMPAD_BUTTON_GREY
+#define LV_ATTRIBUTE_IMG_LOGIN_NUMPAD_BUTTON_GREY
+#endif
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_LOGIN_NUMPAD_BUTTON_GREY uint8_t login_numpad_button_grey_map[];
+const lv_img_dsc_t login_numpad_button;
+
+#endif
